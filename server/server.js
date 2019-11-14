@@ -15,7 +15,7 @@ const businessProtoPath = path.join(__dirname, '..', 'proto', 'business.proto');
 const businessProtoDefinition = protoLoader.loadSync(businessProtoPath);
 const businessPackageDefinition = grpc.loadPackageDefinition(businessProtoDefinition).business;
 
-
+console.log("Hello")
 function registorBusiness(call, callback) {
     // let obj = call.request
 
