@@ -1,0 +1,42 @@
+syntax = "proto3";
+package business;
+
+// service definition
+
+service BusinessService {
+  rpc registorBusiness(newBusiness) returns (result) {}
+  rpc businessDetails(businessId) returns (result) {}
+  rpc deleteBusiness(businessId) returns (Empty) {}
+  rpc updateBusiness(businessId) returns (result) {}
+  rpc businesslogin(login) returns (result) {}
+}
+
+
+message newBusiness {
+  string businessName = 1;
+  string userName = 2;
+  string email = 3;
+  string password = 4;
+};
+
+message result{
+  string businessName = 1;
+  string userName = 2;
+  string email = 3;
+ 
+
+
+};
+
+message businessId{
+  int32 id = 1;
+
+};
+
+message login{
+  string email = 1;
+  string password = 2;
+
+}
+
+message Empty {}
